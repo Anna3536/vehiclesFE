@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/litera/bootstrap.min.css" integrity="sha384-enpDwFISL6M3ZGZ50Tjo8m65q06uLVnyvkFO3rsoW0UC15ATBFz3QEhr3hmxpYsn" crossorigin="anonymous">
+
+
+
+    <script src="../models/car.js"></script>
+    <script src="../models/wheel.js"></script>
+    <script src="../controllers/controller.js"></script>
+
+    <title>Vehicles FE</title>
+</head>
+
+<body>
+    <header class="text-center mt-5">
+        <h1 class="display-4 text-muted">Ejercicio vehículos</h1>
+    </header>
+
+    <div class="container">
+        <div class="row mt-5 d-flex justify-content-center">
+
+
+            <form method="POST" action="#" target="_blank" id="form-car" class="col-4">
+                <div class="form-group">
+                    <label for="plate">Plate</label>
+                    <input type="text" class="form-control" name="plate" id="plate">
+                    <div class="invalid-feedback" id="errorPlate"></div>
+
+                    <label for="brand">Brand</label>
+                    <input type="text" class="form-control" name="brand" id="brand">
+                    <div class="invalid-feedback" id="errorBrand"></div>
+
+                    <label for="color">Color</label>
+                    <input type="text" class="form-control" name="color" id="color">
+                    <div class="invalid-feedback" id="errorColor"></div>
+                </div>
+
+                <a id="button" class="btn btn-primary btn-rounded btn-block" onclick="createCar()">Create car</a>
+
+
+            </form>
+
+        </div>
+
+
+
+        <div class="row mt-2 mb-4 d-flex justify-content-center">
+
+            <form method="POST" action="#" id="form-wheels" class="col-8 d-none">
+                <div class="form-row justify-content-around">
+                    <div class="form-group">
+                        <label for="brand1">Marca Rueda 1</label>
+                        <input type="text" class="form-control" name="brand1" id="brand1">
+                        <div class="invalid-feedback" id="errorBrandWheel1"></div>
+                        <label for="diameter1">Diametro Rueda 1</label>
+                        <input type="text" class="form-control" name="diameter1" id="diameter1">
+                        <div class="invalid-feedback" id="errorDiameter1"></div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="brand3">Marca Rueda 3</label>
+                        <input type="text" class="form-control" name="brand3" id="brand3">
+                        <div class="invalid-feedback" id="errorBrandWheel3"></div>
+                        <label for="diameter3">Diametro Rueda 3</label>
+                        <input type="text" class="form-control" name="diameter3" id="diameter3">
+                        <div class="invalid-feedback" id="errorDiameter3"></div>
+                    </div>
+
+
+                </div>
+
+                <div class="form-row justify-content-around">
+                    <div class="form-group">
+                        <label for="brand2">Marca Rueda 2</label>
+                        <input type="text" class="form-control" name="brand2" id="brand2">
+                        <div class="invalid-feedback" id="errorBrandWheel2"></div>
+                        <label for="diameter2">Diametro Rueda 2</label>
+                        <input type="text" class="form-control" name="diameter2" id="diameter2">
+                        <div class="invalid-feedback" id="errorDiameter2"></div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="brand4">Marca Rueda 4</label>
+                        <input type="text" class="form-control" name="brand4" id="brand4">
+                        <div class="invalid-feedback" id="errorBrandWheel4"></div>
+                        <label for="diameter4">Diametro Rueda 4</label>
+                        <input type="text" class="form-control" name="diameter4" id="diameter4">
+                        <div class="invalid-feedback" id="errorDiameter4"></div>
+                    </div>
+                </div>
+
+
+                <div class="d-flex justify-content-center mt-3">
+                    <a class="btn btn-primary btn-rounded col-6" onclick="addWheels()">Add wheels</a>
+                </div>
+
+            </form>
+
+
+        </div>
+
+        <div class="row d-flex justify-content-center mb-5">
+            <div class="col-6 d-none" id="carInfo">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
